@@ -1,4 +1,4 @@
-module github.com/michaelrios/go_api
+module github.com/michaelrios/go-framelet
 
 go 1.12
 

@@ -1,9 +1,9 @@
 package domains
 
 import (
-	"github.com/michaelrios/go_api/dependencies"
-	"github.com/michaelrios/go_api/models"
-	"github.com/michaelrios/go_api/repositories"
+	"github.com/michaelrios/go-framelet/dependencies"
+	"github.com/michaelrios/go-framelet/models"
+	"github.com/michaelrios/go-framelet/repositories"
 )
 
 func NewUserDomain(db *dependencies.DB) *UserDomain {

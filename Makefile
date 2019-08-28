@@ -2,7 +2,7 @@
 PKGS := $(shell echo $(PKGS_AND_MOCKS) | tr ' ' '\n' | grep -v /mock$)
 
 local:
-	export GO111MODULE=on && go build && ./go_api
+	export GO111MODULE=on && go build && ./go-framelet
 
 coverage:
 	@go test ./... -coverprofile=coverage.out -parallel 4

@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/michaelrios/go_api/api"
-	"github.com/michaelrios/go_api/api/middleware"
-	"github.com/michaelrios/go_api/controllers"
-	"github.com/michaelrios/go_api/dependencies"
+	"github.com/michaelrios/go-framelet/api"
+	"github.com/michaelrios/go-framelet/api/middleware"
+	"github.com/michaelrios/go-framelet/controllers"
+	"github.com/michaelrios/go-framelet/dependencies"
 )
 
 // BuildRoutes returns all of your routes

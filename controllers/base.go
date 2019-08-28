@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/michaelrios/go_api/dependencies"
+	"github.com/michaelrios/go-framelet/dependencies"
 	"go.uber.org/zap"
 )
 

@@ -2,8 +2,8 @@ package api_test
 
 import (
 	"github.com/julienschmidt/httprouter"
-	"github.com/michaelrios/go_api/api"
-	"github.com/michaelrios/go_api/api/middleware"
+	"github.com/michaelrios/go-framelet/api"
+	"github.com/michaelrios/go-framelet/api/middleware"
 	"github.com/stretchr/testify/assert"
 	"go.uber.org/zap/zaptest"
 	"net/http"

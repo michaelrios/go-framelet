@@ -2,7 +2,7 @@ package api
 
 import (
 	"github.com/julienschmidt/httprouter"
-	"github.com/michaelrios/go_api/api/middleware"
+	"github.com/michaelrios/go-framelet/api/middleware"
 )
 
 // InitializeRoutes initializes the routes given

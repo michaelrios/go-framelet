@@ -2,14 +2,14 @@ package responder_test
 
 import (
 	"encoding/json"
-	"github.com/michaelrios/go_api/models"
+	"github.com/michaelrios/go-framelet/models"
 	"net/http"
 	"testing"
 
-	"github.com/michaelrios/go_api/mocks"
+	"github.com/michaelrios/go-framelet/mocks"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/michaelrios/go_api/api/responder"
+	"github.com/michaelrios/go-framelet/api/responder"
 	"go.uber.org/zap/zaptest"
 )
 

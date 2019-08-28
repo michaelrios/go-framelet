@@ -4,12 +4,12 @@ import (
 	"flag"
 	"net/http"
 
-	"github.com/michaelrios/go_api/dependencies"
+	"github.com/michaelrios/go-framelet/dependencies"
 
 	"github.com/pkg/profile"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/michaelrios/go_api/api"
+	"github.com/michaelrios/go-framelet/api"
 	"go.uber.org/zap"
 )
 

@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/michaelrios/go_api/api/middleware"
+	"github.com/michaelrios/go-framelet/api/middleware"
 	"go.uber.org/zap/zaptest"
 )
 

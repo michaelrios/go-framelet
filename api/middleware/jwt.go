@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/michaelrios/go_api/models"
+	"github.com/michaelrios/go-framelet/models"
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/julienschmidt/httprouter"

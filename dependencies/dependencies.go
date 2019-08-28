@@ -1,7 +1,7 @@
 package dependencies
 
 import (
-	"github.com/michaelrios/go_api/api/responder"
+	"github.com/michaelrios/go-framelet/api/responder"
 	"go.uber.org/zap"
 )
 

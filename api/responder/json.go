@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/michaelrios/go_api/models"
+	"github.com/michaelrios/go-framelet/models"
 	"go.uber.org/zap"
 )
 

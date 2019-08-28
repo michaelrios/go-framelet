@@ -3,7 +3,7 @@ package middleware_test
 import (
 	"github.com/dgrijalva/jwt-go"
 	"github.com/julienschmidt/httprouter"
-	"github.com/michaelrios/go_api/api/middleware"
+	"github.com/michaelrios/go-framelet/api/middleware"
 	"github.com/stretchr/testify/assert"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zaptest"

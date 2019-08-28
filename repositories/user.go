@@ -1,8 +1,8 @@
 package repositories
 
 import (
-	"github.com/michaelrios/go_api/dependencies"
-	"github.com/michaelrios/go_api/models"
+	"github.com/michaelrios/go-framelet/dependencies"
+	"github.com/michaelrios/go-framelet/models"
 )
 
 func NewUserRepository(db *dependencies.DB) *UserRepository {

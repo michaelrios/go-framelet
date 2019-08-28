@@ -5,11 +5,11 @@ import (
 	"net/http"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/michaelrios/go_api/models"
+	"github.com/michaelrios/go-framelet/models"
 	"go.uber.org/zap"
 
-	"github.com/michaelrios/go_api/dependencies"
-	"github.com/michaelrios/go_api/domains"
+	"github.com/michaelrios/go-framelet/dependencies"
+	"github.com/michaelrios/go-framelet/domains"
 )
 
 func NewUserController(deps *dependencies.Dependencies) *UserController {
