@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"fmt"
+	"golang.org/x/xerrors"
 	"net/http"
 
 	"github.com/julienschmidt/httprouter"
@@ -35,7 +36,14 @@ func (c *UserController) GetUser(w http.ResponseWriter, r *http.Request, p httpr
 		return
 	}
 
-	user, _ := c.UserDomain.GetUser(requestingUser.UserID)
+	user, err := c.UserDomain.GetUser(requestingUser.UserID)
+	if xerrors.Is(err, domains.UserNotFound) {
+		c.RespondWith404(w)
+		return
+	} else if err != nil {
+		c.RespondWith500(w) // shit is broke
+		return
+	}
 
 	c.RespondWithData(w, user)
 }

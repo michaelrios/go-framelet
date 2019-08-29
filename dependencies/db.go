@@ -1,4 +1,3 @@
 package dependencies
 
-type DB struct {
-}
+type DB struct {}

@@ -46,6 +46,22 @@ func (r *JsonResponder) RespondWith400(w http.ResponseWriter, errors ...string) 
 	r.respondWithJson(w, http.StatusBadRequest, bytes)
 }
 
+func (r *JsonResponder) RespondWith404(w http.ResponseWriter, errors ...string) {
+	if len(errors) == 0 {
+		errors = append(errors, "entity not found")
+	}
+
+	errorResponse := ErrorResponse{Errors: errors}
+	bytes, err := json.Marshal(errorResponse)
+	if err != nil {
+		r.logger.With(zap.Error(err)).DPanic("failed to marshal data")
+		r.RespondWith500(w)
+		return
+	}
+
+	r.respondWithJson(w, http.StatusNotFound, bytes)
+}
+
 func (r *JsonResponder) RespondWith500(w http.ResponseWriter) {
 	r.respondWithJson(w, http.StatusInternalServerError, []byte("{\"errors\":[\"internal server error\"]}"))
 }

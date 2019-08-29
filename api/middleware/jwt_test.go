@@ -22,7 +22,7 @@ func TestMiddleware_JWT_Success(t *testing.T) {
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, middleware.Claims{
 		UserId: "123",
 		StandardClaims: jwt.StandardClaims{
-			ExpiresAt: time.Now().Add(time.Minute).Unix(),
+			ExpiresAt: time.Now().Add(time.Hour * 24).Unix(),
 			Subject: "subject",
 			IssuedAt: time.Now().Unix(),
 		},

@@ -14,5 +14,8 @@ type UserRepository struct {
 }
 
 func (ur *UserRepository) GetUser(id models.UserID) (*models.User, error) {
-	return &models.User{UserID: id, Email: "hi@email.com"}, nil
+
+	//return nil, fmt.Errorf("something terrible happened")
+
+	return nil, ErrEntityNotFound
 }
