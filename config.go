@@ -44,8 +44,8 @@ type Logger struct {
 // lookatme
 // Server consider adding things like timeout and make sure this matches with the Dockerfile
 type Server struct {
-	Host string `env:"SERVER_HOST" envDefault:":"`
-	Port string `env:"SERVER_PORT" envDefault:"8000"`
+	Host string `env:"SERVER_HOST" envDefault:""`
+	Port string `env:"SERVER_PORT" envDefault:":8000"`
 }
 
 // lookatme

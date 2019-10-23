@@ -4,7 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/michaelrios/go-framelet/models"
+	"github.com/michaelrios/go-framelet/controllers/viewmodels"
+
 	"go.uber.org/zap"
 )
 
@@ -16,7 +17,7 @@ type JsonResponder struct {
 	logger *zap.Logger
 }
 
-func (r *JsonResponder) RespondWithData(w http.ResponseWriter, viewable models.Viewable) {
+func (r *JsonResponder) RespondWithData(w http.ResponseWriter, viewable viewmodels.Viewable) {
 	bytes, err := viewable.Bytes()
 	if err != nil {
 		r.RespondWith500(w)

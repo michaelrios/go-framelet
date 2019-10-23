@@ -2,9 +2,11 @@ package responder_test
 
 import (
 	"encoding/json"
-	"github.com/michaelrios/go-framelet/models"
 	"net/http"
 	"testing"
+
+	"github.com/michaelrios/go-framelet/controllers/viewmodels"
+	"github.com/michaelrios/go-framelet/dtos"
 
 	"github.com/michaelrios/go-framelet/mocks"
 	"github.com/stretchr/testify/assert"
@@ -49,11 +51,11 @@ func TestJsonResponder_RespondWithData(t *testing.T) {
 	jsonResponder := responder.NewJsonResponder(logger)
 	w := mocks.NewMockWriter()
 
-	jsonResponder.RespondWithData(w, &models.User{UserID: models.UserID("1")})
+	jsonResponder.RespondWithData(w, &viewmodels.ResponseUser{UserID: "1"})
 
 	assert.Equal(t, http.StatusOK, w.Assert.Status)
-	user := models.User{}
+	user := viewmodels.ResponseUser{}
 	err := json.Unmarshal(w.Assert.Bytes, &user)
 	assert.Nil(t, err)
-	assert.Equal(t, models.UserID("1"), user.UserID)
+	assert.Equal(t, dtos.UserID("1"), user.UserID)
 }

@@ -2,7 +2,7 @@ package repositories
 
 import (
 	"github.com/michaelrios/go-framelet/dependencies"
-	"github.com/michaelrios/go-framelet/models"
+	"github.com/michaelrios/go-framelet/dtos"
 )
 
 func NewUserRepository(db *dependencies.DB) *UserRepository {
@@ -13,9 +13,18 @@ type UserRepository struct {
 	db *dependencies.DB
 }
 
-func (ur *UserRepository) GetUser(id models.UserID) (*models.User, error) {
+func (ur *UserRepository) GetUser(id dtos.UserID) (*dtos.User, error) {
+	return &dtos.User{UserID: "1", Email: "a@b.c"}, nil
+}
 
-	//return nil, fmt.Errorf("something terrible happened")
+func (ur *UserRepository) CreateUser(user *dtos.User) (*dtos.User, error) {
+	return &dtos.User{UserID: "1", Email: "a@b.c"}, nil
+}
 
-	return nil, ErrEntityNotFound
+func (ur *UserRepository) UpdateUser(user *dtos.User) (*dtos.User, error) {
+	return user, nil
+}
+
+func (ur *UserRepository) DeleteUser(id dtos.UserID) error {
+	return nil
 }

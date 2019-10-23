@@ -1,4 +1,4 @@
-package models
+package viewmodels
 
 type Viewable interface {
 	Bytes() ([]byte, error)

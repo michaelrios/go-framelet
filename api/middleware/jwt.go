@@ -5,8 +5,6 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/michaelrios/go-framelet/models"
-
 	"github.com/dgrijalva/jwt-go"
 	"github.com/julienschmidt/httprouter"
 	"go.uber.org/zap"
@@ -52,18 +50,18 @@ func (m *Middleware) JWT(next httprouter.Handle) httprouter.Handle {
 
 // Claims from JWT contents
 type Claims struct {
-	UserId      models.UserID `json:"user_id"`
-	Permissions []string      `json:"permissions"`
+	UserId      string   `json:"user_id"`
+	Permissions []string `json:"permissions"`
 	jwt.StandardClaims
 }
 
-func (c *Claims) RequestingUser() *models.RequestingUser {
+func (c *Claims) RequestingUser() *AuthenticatedUser {
 	permissions := make(map[string]bool)
 	for _, v := range c.Permissions {
 		permissions[v] = true
 	}
 
-	return &models.RequestingUser{
+	return &AuthenticatedUser{
 		UserID:      c.UserId,
 		Permissions: permissions,
 	}
